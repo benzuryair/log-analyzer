@@ -33,3 +33,7 @@ def get_suspicions(date):
         suspicions_dikt[i[1]] = suspicions_list
 
     return suspicions_dikt
+
+
+def filter_suspicions(suspicions_dikt):
+    return {i: j for i, j in suspicions_dikt.items if len(j) >= 2}
